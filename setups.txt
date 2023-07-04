@@ -1,0 +1,30 @@
+Main experiment setups for MovieLens and LastFM datasets
+
+# MovieLens
+
+# VAErec
+python train.py --run_group BASE_MOVIELENS --verbose --beta 0.2 --tr_batch_size 805 --te_batch_size 1610 --n_epoch 200 --n_chi2_items 600
+
+# VAEadv
+python train.py --run_group ADV_MOVIELENS --verbose --delta 250 --z_dim 24 --tr_batch_size 805 --te_batch_size 1610 --n_epoch 450 --n_adv_train 6 --n_chi2_items 600
+
+# VAEgan
+python train.py --run_group GAN_MOVIELENS --verbose --alpha 540 --gamma 240 --z_dim 24 --b_dim 3 --ganKL --tr_batch_size 805 --te_batch_size 1610 --n_epoch 500 --n_adv_train 32 --n_chi2_items 600
+
+# VAEemp
+python train.py --run_group EMP_MOVIELENS --verbose --alpha 540 --gamma 240 --z_dim 24 --b_dim 3 --tr_batch_size 805 --te_batch_size 1610 --n_epoch 500 --n_chi2_items 600
+
+
+# LastFM
+
+# VAErec
+python train.py --run_group BASE_LASTFM --csr --verbose --beta 0.2 --tr_batch_size 500 --te_batch_size 1000 --n_epoch 125 --n_chi2_items 750
+
+# VAEadv
+python train.py --run_group ADV_LASTFM --csr --verbose --delta 250 --z_dim 24 --tr_batch_size 500 --te_batch_size 1000 --n_epoch 200 --n_adv_train 6 --n_chi2_items 750
+
+# VAEgan
+python train.py --run_group GAN_LASTFM --csr --verbose --alpha 540 --gamma 240 --z_dim 24 --b_dim 3 --ganKL --tr_batch_size 500 --te_batch_size 1000 --n_epoch 350 --n_adv_train 32 --n_chi2_items 750
+
+# VAEemp
+python train.py --run_group EMP_LASTFM --csr --verbose --alpha 540 --gamma 240 --z_dim 24 --b_dim 3 --tr_batch_size 500 --te_batch_size 1000 --n_epoch 275 --n_chi2_items 750
