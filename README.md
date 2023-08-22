@@ -1,5 +1,5 @@
 # Providing Previously Unseen Users Fair Recommendations Using Variational Autoencoders
-This is the official repository for the paper "Providing Previously Unseen Users Fair Recommendations Using Variational Autoencoders" appearing in the RecSys 2023 conference.
+This is the official repository for the paper "Providing Previously Unseen Users Fair Recommendations Using Variational Autoencoders", appearing in the RecSys 2023 conference.
 
 ## Requirements(version used)
 The packages required for running the code are the following:
@@ -13,9 +13,12 @@ The packages required for running the code are the following:
 A "pip freeze" dump of the development python environment is also provided in requirements.txt. However, this also list numerous packages that will be installed when installing the listed packages, auxilliary packages used for formatting and prototyping, and packages like SLIM that are not listed by pip.
 
 ## Running the code
-train.py is used for training and evaluating all setups of the VAE models and supports argument parsing through pythons argparse package. To list the available arguments along with descriptions and instructions, run "python train.py -h". setups.txt lists the model configurations presented in the main results of the paper.
+train.py is used for training and evaluating all setups of the VAE models and supports argument parsing through pythons argparse package. To list the available arguments, descriptions and instructions, run "python train.py -h". setups.txt lists the model configurations presented in the main results of the paper.
 
 We also provide the code we used for evaluating the SLIM baseline, which can be found in eval_slim.py. For this file we do not provide argument parsing as the configurations only depend on the considered dataset.
+
+### Logging
+The "verbose" flag can be used to enable logging through Weights & Biases. Users who want to use other logging tools must change the code accordingly.
 
 ## Specific python packages and code inspiration
 The SLIM baseline was evaluated using the public implementation of the authors, which can be found here: https://github.com/KarypisLab/SLIM. The code for evaluating SLIM is found in eval_slim.py and requires that SLIM has been built and installed.
