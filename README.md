@@ -17,8 +17,8 @@ train.py is used for training and evaluating all setups of the VAE models and su
 
 We also provide the code we used for evaluating the SLIM baseline, which can be found in eval_slim.py. For this file we do not provide argument parsing as the configurations only depend on the considered dataset.
 
-### Logging
-The "verbose" flag can be used to enable logging through Weights & Biases. Users who want to use other logging tools must change the code accordingly.
+### Logging and plotting
+The "verbose" flag can be used to enable logging and plotting through Weights & Biases. Users who want to use other logging tools must change the code accordingly.
 
 ## Specific python packages and code inspiration
 The SLIM baseline was evaluated using the public implementation of the authors, which can be found here: https://github.com/KarypisLab/SLIM. The code for evaluating SLIM is found in eval_slim.py and requires that SLIM has been built and installed.
